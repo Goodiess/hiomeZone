@@ -38,7 +38,7 @@ export const signUp = async (req, res) => {
                 name,
                 password: encryption,
                 email,
-                // confirmPassword: encryption
+                confirmPassword: encryption
             })
             await newAgent.save()
             res.status(200).json({message: 'Agent registered succesfully',newAgent})
@@ -73,7 +73,7 @@ export const register = async (req, res) => {
                 name,
                 password: encryption,
                 email,
-                // confirmPassword: encryption
+                confirmPassword: encryption
             })
             await newClient.save()
             res.status(200).json({message: 'Agent registered succesfully',newClient})

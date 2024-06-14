@@ -1,8 +1,6 @@
 import { z } from 'zod';
 
 export const signUpValidator = z.object({
-  // name: z.string(),
-  // userName: z.string(),
   password: z
     .string()
     .min(8, { message: 'Password should be at least 8 characters long' })
@@ -17,7 +15,6 @@ export const signUpValidator = z.object({
     message: 'Password should contain at least one uppercase letter, one lowercase letter, one number, and one special character',
   }),
   email: z.string().min(3).max(30),
-  // phoneNumber: z.string().min(10).max(11),
 }).required({ message: 'Please enter all the required fields' });
 
 

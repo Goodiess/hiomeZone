@@ -5,13 +5,9 @@ import cors from 'cors'
 import dotenv from "dotenv";
 import router from "./SRC/route/indexroute.js";
 
-//INITIALIZING THE DOTENV METHOD
 dotenv.config();
 
-//ASIGNING THE EXPRESS METHOD TO A VARIABLE
 const app = express();
-
-// Calling the port from the env file
 const PORT  = process.env.PORT || 3030
 
 

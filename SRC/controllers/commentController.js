@@ -1,6 +1,5 @@
-import Comment from '../models/commentModel.js'; // Adjust the import path as necessary
+import Comment from '../models/commentModel.js';
 
-// Create a new comment
 export const createComment = async (req, res) => {
   try {
     const { text, user, house } = req.body;
@@ -11,8 +10,6 @@ export const createComment = async (req, res) => {
     res.status(400).json({ message: error.message });
   }
 };
-
-// Get all comments
 export const getAllComments = async (req, res) => {
   try {
     const comments = await Comment.find().populate('user').populate('house');
@@ -22,7 +19,6 @@ export const getAllComments = async (req, res) => {
   }
 };
 
-// Get a single comment by ID
 export const getCommentById = async (req, res) => {
   try {
     const comment = await Comment.findById(req.params.id).populate('user').populate('house');
@@ -32,8 +28,6 @@ export const getCommentById = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
-
-// Update a comment
 export const updateComment = async (req, res) => {
   try {
     const { text, user, house } = req.body;
@@ -49,7 +43,6 @@ export const updateComment = async (req, res) => {
   }
 };
 
-// Delete a comment
 export const deleteComment = async (req, res) => {
   try {
     const deletedComment = await Comment.findByIdAndDelete(req.params.id);

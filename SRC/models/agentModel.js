@@ -15,14 +15,11 @@ const agentSchema = mongoose.Schema({
     required: true
   },
 
-  // confirmPassword:{
-  //   type: String,
-  //   // required: true
-  // },
-  // phoneNumber:{
-  //   type: string,
-  //   rquired: true
-  // },
+  confirmPassword:{
+    type: String,
+    required: true
+  },
+
 
   role: {
     type: String,

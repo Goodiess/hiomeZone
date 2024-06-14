@@ -12,7 +12,7 @@ const comment = mongoose.Schema({
   },
   house: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "House", // assuming 'House' is the name of the house model
+    ref: "House", 
     required: true,
   },
 });
